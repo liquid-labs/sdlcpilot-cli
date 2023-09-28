@@ -1,0 +1,19 @@
+Test git rev: 53ea8b3b673a0f7adeb4c961488de7741783ff6d
+catalyst 1.0.0-alpha.0
+plugable-express-cli 1.0.0-alpha.4
+PASS test/catalyst-cli.test.js
+  startCatalystCLI
+    ✓ can start the CLI process (defines necessary parameters) (1 ms)
+
+------------------|---------|----------|---------|---------|-------------------
+File              | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+------------------|---------|----------|---------|---------|-------------------
+All files         |   88.88 |    88.88 |     100 |   88.23 |                   
+ catalyst-cli.mjs |     100 |    88.88 |     100 |     100 | 24                
+ index.js         |       0 |      100 |     100 |       0 | 1-3               
+------------------|---------|----------|---------|---------|-------------------
+Test Suites: 1 passed, 1 total
+Tests:       1 passed, 1 total
+Snapshots:   0 total
+Time:        0.29 s, estimated 1 s
+Ran all test suites.
