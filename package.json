@@ -3,8 +3,20 @@
   "version": "1.0.0-alpha.0",
   "description": "",
   "main": "dist/catalyst-cli.js",
+  "bin": {
+    "catalyst": "dist/catalyst-cli.js"
+  },
+  "files": [
+    "dist/*"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "make",
+    "lint": "make lint",
+    "lint:fix": "make lint-fix",
+    "test": "make test",
+    "prepack": "make build",
+    "preversion": "make test && make lint",
+    "qa": "make qa"
   },
   "keywords": [],
   "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
@@ -13,5 +25,12 @@
   "bugs": {
     "url": "https://github.com/liquid-labs/catalyst-cli/issues"
   },
-  "homepage": "https://github.com/liquid-labs/catalyst-cli#readme"
+  "homepage": "https://github.com/liquid-labs/catalyst-cli#readme",
+  "dependencies": {
+    "@liquid-labs/catalyst-defaults": "^1.0.0-alpha.1",
+    "@liquid-labs/plugable-express-cli": "^1.0.0-alpha.4"
+  },
+  "devDependencies": {
+    "@liquid-labs/catalyst-scripts-node-project": "^1.0.0-alpha.22"
+  }
 }
