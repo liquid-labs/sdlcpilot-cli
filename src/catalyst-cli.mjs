@@ -22,19 +22,19 @@ const getVersion = () => {
 }
 
 const localServerDevPaths = process.env.CATALYST_LOCAL_ROOT === undefined
-  ? [ fsPath.join(LIQ_PLAYGROUND(), 'catalyst-server'), 
-      fsPath.join(LIQ_PLAYGROUND(), 'liquid-labs', 'catalyst-server') ]
-  : [ process.env.CATALYST_LOCAL_ROOT ]
+  ? [fsPath.join(LIQ_PLAYGROUND(), 'catalyst-server'),
+    fsPath.join(LIQ_PLAYGROUND(), 'liquid-labs', 'catalyst-server')]
+  : [process.env.CATALYST_LOCAL_ROOT]
 
 const cliSettings = {
-  cliName             : 'catalyst',
+  cliName       : 'catalyst',
   getVersion,
-  cliHome             : CATALYST_HOME(),
+  cliHome       : CATALYST_HOME(),
   localServerDevPaths,
-  port              : CATALYST_PORT(),
-  serverAPIPath     : CATALYST_API_SPEC(),
-  serverPackage     : '@liquid-lab/catalyst-server',
-  serverVersion     : 'latest'
+  port          : CATALYST_PORT(),
+  serverAPIPath : CATALYST_API_SPEC(),
+  serverPackage : '@liquid-lab/catalyst-server',
+  serverVersion : 'latest'
 }
 
 const startCatalystCLI = () => startCLI(cliSettings)
