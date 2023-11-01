@@ -38,6 +38,6 @@ const cliSettings = {
   serverVersion : 'latest'
 }
 
-const startCatalystCLI = () => startCLI(cliSettings)
+const startCatalystCLI = async() => await startCLI(cliSettings)
 
 export { startCatalystCLI }
