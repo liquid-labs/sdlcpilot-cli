@@ -33,10 +33,11 @@ const cliSettings = {
   localServerDevPaths,
   port          : CATALYST_PORT(),
   serverAPIPath : CATALYST_API_SPEC(),
+  serverExec    : 'catalyst-server',
   serverPackage : '@liquid-lab/catalyst-server',
   serverVersion : 'latest'
 }
 
-const startCatalystCLI = () => startCLI(cliSettings)
+const startCatalystCLI = async() => await startCLI(cliSettings)
 
 export { startCatalystCLI }

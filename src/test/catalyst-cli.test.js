@@ -1,4 +1,4 @@
-/* global afterAll beforeAll describe expect test */
+/* global afterAll beforeAll describe test */
 import { startCatalystCLI } from '../catalyst-cli'
 
 describe('startCatalystCLI', () => {
@@ -7,8 +7,9 @@ describe('startCatalystCLI', () => {
   beforeAll(() => { origArgv = process.argv })
   afterAll(() => { process.argv = origArgv })
 
-  test('can start the CLI process (defines necessary parameters)', () => {
-    process.argv = ['node', 'script.js', '-v']
-    expect(() => startCatalystCLI()).not.toThrow()
+  test('can start the CLI process (defines necessary parameters)', async() => {
+    process.argv = ['node', 'foo.js', '--version']
+
+    await startCatalystCLI() // expect to not throw
   })
 })
