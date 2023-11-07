@@ -29,7 +29,7 @@
   "dependencies": {
     "@liquid-labs/catalyst-defaults": "^1.0.0-alpha.5",
     "@liquid-labs/liq-defaults": "^1.0.0-alpha.3",
-    "@liquid-labs/plugable-express-cli": "^1.0.0-alpha.7"
+    "@liquid-labs/plugable-express-cli": "^1.0.0-alpha.8"
   },
   "devDependencies": {
     "@liquid-labs/catalyst-scripts-node-project": "^1.0.0-alpha.22"
