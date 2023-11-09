@@ -1,5 +1,5 @@
 /* global afterAll beforeAll describe test */
-import { startCatalystCLI } from '../catalyst-cli'
+import { startCatalystCLI } from '../sdlcpilot-cli'
 
 describe('startCatalystCLI', () => {
   let origArgv

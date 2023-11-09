@@ -1,10 +1,10 @@
 {
-  "name": "@liquid-labs/catalyst-cli",
+  "name": "sdlcpilot-cli",
   "version": "1.0.0-alpha.1",
   "description": "",
-  "main": "dist/catalyst-cli.js",
+  "main": "dist/sdlcpilot-cli.js",
   "bin": {
-    "catalyst": "dist/catalyst-cli.js"
+    "sdlc": "dist/sdlcpilot-cli.js"
   },
   "files": [
     "dist/*"
@@ -21,11 +21,14 @@
   "keywords": [],
   "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
   "license": "UNLICENSED",
-  "repository": "git+ssh://git@github.com/liquid-labs/catalyst-cli.git",
-  "bugs": {
-    "url": "https://github.com/liquid-labs/catalyst-cli/issues"
+  "repository": {
+    "url": "git+ssh://git@github.com/liquid-labs/sdlcpilot-cli.git",
+    "type": "git"
   },
-  "homepage": "https://github.com/liquid-labs/catalyst-cli#readme",
+  "bugs": {
+    "url": "https://github.com/liquid-labs/sdlcpilot-cli/issues"
+  },
+  "homepage": "https://github.com/liquid-labs/sdlcpilot-cli#readme",
   "dependencies": {
     "@liquid-labs/catalyst-defaults": "^1.0.0-alpha.5",
     "@liquid-labs/liq-defaults": "^1.0.0-alpha.3",

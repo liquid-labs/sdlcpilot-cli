@@ -1,1 +1,0 @@
-npx catalyst-scripts-node-project --update-makefile --cli-only --cli-name catalyst-cli --update-gitignore
