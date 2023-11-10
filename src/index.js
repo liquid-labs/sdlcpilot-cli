@@ -1,3 +1,3 @@
-import { startCatalystCLI } from './catalyst-cli'
+import { startSDLCPilotCLI } from './sdlcpilot-cli'
 
-startCatalystCLI()
+startSDLCPilotCLI()

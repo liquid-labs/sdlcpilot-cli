@@ -27,7 +27,7 @@ const localServerDevPaths = process.env.CATALYST_LOCAL_ROOT === undefined
   : [process.env.CATALYST_LOCAL_ROOT]
 
 const cliSettings = {
-  cliName       : 'catalyst',
+  cliName       : 'sdlc',
   getVersion,
   cliHome       : CATALYST_HOME(),
   localServerDevPaths,
@@ -38,6 +38,6 @@ const cliSettings = {
   serverVersion : 'latest'
 }
 
-const startCatalystCLI = async() => await startCLI(cliSettings)
+const startSDLCPilotCLI = async() => await startCLI(cliSettings)
 
-export { startCatalystCLI }
+export { startSDLCPilotCLI }
