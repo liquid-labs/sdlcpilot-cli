@@ -1,7 +1,7 @@
 /* global afterAll beforeAll describe test */
-import { startCatalystCLI } from '../sdlcpilot-cli'
+import { startSDLCPilotCLI } from '../sdlcpilot-cli'
 
-describe('startCatalystCLI', () => {
+describe('startSDLCPilotCLI', () => {
   let origArgv
 
   beforeAll(() => { origArgv = process.argv })
@@ -10,6 +10,6 @@ describe('startCatalystCLI', () => {
   test('can start the CLI process (defines necessary parameters)', async() => {
     process.argv = ['node', 'foo.js', '--version']
 
-    await startCatalystCLI() // expect to not throw
+    await startSDLCPilotCLI() // expect to not throw
   })
 })
