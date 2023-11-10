@@ -33,8 +33,8 @@ const cliSettings = {
   localServerDevPaths,
   port          : CATALYST_PORT(),
   serverAPIPath : CATALYST_API_SPEC(),
-  serverExec    : 'catalyst-server',
-  serverPackage : '@liquid-lab/catalyst-server',
+  serverExec    : 'comply-server',
+  serverPackage : 'comply-server',
   serverVersion : 'latest'
 }
 
