@@ -26,14 +26,25 @@ const localServerDevPaths = process.env.CATALYST_LOCAL_ROOT === undefined
     fsPath.join(LIQ_PLAYGROUND(), 'liquid-labs', 'catalyst-server')]
   : [process.env.CATALYST_LOCAL_ROOT]
 
+// TODO: move this to the plugable-defaults
+const defaultRegistries = [
+  {
+    name : 'Liquid Labs Canonical Catalyst Registry',
+    url  : 'https://raw.githubusercontent.com/liquid-labs/liq-registry/main/registry.yaml'
+  }
+]
+
 const cliSettings = {
   cliName       : 'sdlc',
   getVersion,
   cliHome       : CATALYST_HOME(),
+  defaultRegistries,
   localServerDevPaths,
+  noRegistries  : false,
   port          : CATALYST_PORT(),
   serverAPIPath : CATALYST_API_SPEC(),
   serverExec    : 'comply-server',
+  serverHome    : CATALYST_HOME(),
   serverPackage : 'comply-server',
   serverVersion : 'latest'
 }
