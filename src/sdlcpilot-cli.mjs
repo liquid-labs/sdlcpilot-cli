@@ -1,8 +1,8 @@
 import { readFileSync } from 'node:fs'
 import * as fsPath from 'node:path'
 
-import { CATALYST_API_SPEC, CATALYST_HOME, CATALYST_PORT } from '@liquid-labs/catalyst-defaults'
-import { LIQ_PLAYGROUND } from '@liquid-labs/liq-defaults'
+import { COMPLY_API_SPEC_PATH, COMPLY_HOME, COMPLY_PORT, COMPLY_SERVER_CLI_NAME } from '@liquid-labs/comply-defaults'
+import { PLUGABLE_PLAYGROUND, PLUGABLE_REGISTRY } from '@liquid-labs/plugable-defaults'
 import { startCLI } from '@liquid-labs/plugable-express-cli'
 
 let versionCache
@@ -21,32 +21,23 @@ const getVersion = () => {
   return versionCache
 }
 
-const localServerDevPaths = process.env.CATALYST_LOCAL_ROOT === undefined
-  ? [fsPath.join(LIQ_PLAYGROUND(), 'catalyst-server'),
-    fsPath.join(LIQ_PLAYGROUND(), 'liquid-labs', 'catalyst-server')]
-  : [process.env.CATALYST_LOCAL_ROOT]
-
-// TODO: move this to the plugable-defaults
-const defaultRegistries = [
-  {
-    name : 'Liquid Labs Canonical Catalyst Registry',
-    url  : 'https://raw.githubusercontent.com/liquid-labs/liq-registry/main/registry.yaml'
-  }
+const localServerDevPaths = [
+  fsPath.join(PLUGABLE_PLAYGROUND(), COMPLY_SERVER_CLI_NAME()),
+  fsPath.join(PLUGABLE_PLAYGROUND(), 'liquid-labs', COMPLY_SERVER_CLI_NAME())
 ]
 
 const cliSettings = {
-  cliName       : 'sdlc',
+  cliName           : 'sdlc',
   getVersion,
-  cliHome       : CATALYST_HOME(),
-  defaultRegistries,
+  defaultRegistries : [PLUGABLE_REGISTRY()],
   localServerDevPaths,
-  noRegistries  : false,
-  port          : CATALYST_PORT(),
-  serverAPIPath : CATALYST_API_SPEC(),
-  serverExec    : 'comply-server',
-  serverHome    : CATALYST_HOME(),
-  serverPackage : 'comply-server',
-  serverVersion : 'latest'
+  noRegistries      : false,
+  port              : COMPLY_PORT(),
+  serverAPIPath     : COMPLY_API_SPEC_PATH(),
+  serverExec        : COMPLY_SERVER_CLI_NAME(),
+  serverHome        : COMPLY_HOME(),
+  serverPackage     : COMPLY_SERVER_CLI_NAME(),
+  serverVersion     : 'latest'
 }
 
 const startSDLCPilotCLI = async() => await startCLI(cliSettings)
