@@ -48,4 +48,4 @@ Where `/path/to/bin/dir` is replaced with the path of the bin directory in quest
 
 ## Usage
 
-Refer to the [user documentation](./doc).
+Refer to the [user documentation](./docs/index.md).
