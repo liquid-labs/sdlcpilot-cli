@@ -1,7 +1,7 @@
 {
   "name": "sdlcpilot-cli",
   "version": "1.0.0-alpha.10",
-  "description": "",
+  "description": "Command line interface for SDLCPilot, a Software Development Life Cycle management tool.",
   "main": "dist/sdlcpilot-cli.js",
   "bin": {
     "sdlc": "dist/sdlcpilot-cli.js"
