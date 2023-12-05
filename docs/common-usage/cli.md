@@ -16,3 +16,4 @@ You can generally use tab completion to see "what's possible" at any point. Tab 
 - Tab completion is complete for all parameters (i.e., all the parameters after the '--').
 - Many parameter options can be tab completed (i.e., after the '='; e.g., `sdlc server plugins bundles add -- bundle=<TAB>` will list the known available bundles).
 - Note, tab completion in zsh is known to have some limitations (at least on MacOS 13.5.2). In particular, it won't show parameter options, even when there are options available.
+- Tab completion can get wonky if you have an impossible command sequence. E.g., if you have `sdlc start --` (rather than `sdlc work start`), then tab completion may give you erroneous results or may even erase some of your command.
