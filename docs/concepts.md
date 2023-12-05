@@ -1,0 +1,14 @@
+# SDLCPilot Concepts
+
+- <span id="change-control">__change control__</span>: a collection of processes intended to manage software change according to organization policy. SDLCPilot implements automated change control.
+- <span id="credential">__credential__</span>: some secret file or key used to prove the identity of a user.
+- <span id="main-branch">__main branch__</span>: a designated, permanent branch (usually called 'main') within a [repository](#repository) where 'final' changes are merged. I.e., at any given time the 'main' branch has the most "up-to-date" version of the code. All work and release branches originate from the main branch.
+- <span id="org">__org__</span>: short for "organization", the org is where cross-project policies and settings are managed.
+- <span id="playground">__playground__</span>: a directory containing the 'imported' (or cloned) project repositories; e.g., the "stuff you're working on". By default, projects are imported according to their NPM name with any leading '@' removed. So, project '@acme/foo' would be found in `~/playground/acme/foo` and project `bar` in `~/playground/bar`. The default location for the playground is `${HOME}/playground`.
+- <span id="project">__project__</span>: a collection of artifacts intended to implement or support functionality. This may be a library intended to be used by other projects or an end-user application. Projects are associated with one and only one code [repository](#repository). The term 'project' and 'repository' can often be used interchangeably, though they refer to different aspects of the same set of artifacts.
+- <span id="pull-request">__pull request__</span>: a request to merge changes from a [work branch](#work-branch) to the [main branch](#main-branch).
+- <span id="release">__release__</span>: a specific tagged snapshot of a [project](#project) which has been released for consumption.
+- <span id="repository">__repository__</span>: a collection of artifacts under version control. Repositories are associated with one and only one [project](#project) and the terms can often be used interchangeably, though they refer to different aspects of the same set of artifacts.
+- <span id="unit-of-work">__unit of work__</span>: a defined set of changes isolated on a [repository](#repository) [work branch](#work-branch). The unit of work consists of those changes made since the fork of the work branch up until the branch is merged back to the [main branch](#main-branch) via a [pull request](#pull-request).
+- <span id="work">__work__</span>: in this context, "work" refers to changing [project](#project) code
+- <span id="work-branch">__work branch__</span>: a non-permanent [repository](#repository) branch created to define and contain a [unit of work](#unit-of-work).

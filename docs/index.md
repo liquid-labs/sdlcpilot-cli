@@ -1,10 +1,12 @@
 # <span id="sdlcpilot_documentation">SDLCPilot Documentation</span>
 
+- _[Concepts](./concepts.md)_
+
 ## Common usage guides
 
 - _[Using the CLI](./common-usage/cli.md)_
 - _[Creating and managing projects](./common-usage/projects.md)_
-- _[Change management / doing work](./common-usage/work.md)_
+- _[Change management and doing work](./common-usage/work.md)_
 
 ## User reference
 
