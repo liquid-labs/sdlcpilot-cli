@@ -1,0 +1,19 @@
+Test git rev: 47e259191d73c1dbd36b2eee732b7ece99ffa856
+sdlc 1.0.0-alpha.10
+plugable-express-cli 1.0.0-alpha.18
+PASS test/catalyst-cli.test.js
+  startSDLCPilotCLI
+    ✓ can start the CLI process (defines necessary parameters) (7 ms)
+
+-------------------|---------|----------|---------|---------|-------------------
+File               | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+-------------------|---------|----------|---------|---------|-------------------
+All files          |    91.3 |     90.9 |     100 |   88.23 |                   
+ index.js          |       0 |      100 |     100 |       0 | 1-3               
+ sdlcpilot-cli.mjs |     100 |     90.9 |     100 |     100 | 43                
+-------------------|---------|----------|---------|---------|-------------------
+Test Suites: 1 passed, 1 total
+Tests:       1 passed, 1 total
+Snapshots:   0 total
+Time:        0.493 s, estimated 1 s
+Ran all test suites.
