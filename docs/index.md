@@ -1,9 +1,10 @@
 # <span id="sdlcpilot_documentation">SDLCPilot Documentation</span>
 
+This project is approaching the 'beta' phase where (after some cleanup) we start locking down the existing interface. At this point, users should consider the inferface volatile and subject to change.
+
+## User guides
+
 - _[Concepts](./concepts.md)_
-
-## Common usage guides
-
 - _[Using the CLI](./common-usage/cli.md)_
 - _[Creating and managing projects](./common-usage/projects.md)_
 - _[Change management and doing work](./common-usage/work.md)_
