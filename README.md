@@ -86,5 +86,7 @@ Where `/path/to/bin/dir` is replaced with the path of the bin directory in quest
       ```
 6. Do some work and save it: `sdlc work save -- summary="initial implementation"`
 7. Create PR: `sdlc work submit`
+8. Review and merge PR on GitHub.
+9. Close the work and return to main: `sdlc work close`
 
 Refer to the [user documentation](./docs/index.md)
