@@ -66,6 +66,25 @@ Where `/path/to/bin/dir` is replaced with the path of the bin directory in quest
       ```
       sdlc work start -- issueTitle='Initial implementation' issueOverview='Implement basic functions' issueDeliverables="do X;;do Y"
       ```
-4. Do some work. TODO: submit work and publish release.
+4. Create a minimal project (TODO: I think this may be automated somewhere...):
+   ```
+   mkdkir src
+   echo -e "console.log('Hello world!')\n" > src/index.mjs
+   ```
+5. Setup development cycle stuff (if creating a Javascript based project):
+   1. `sdlc projects workflows local node-build add`
+   2. Update the `package.json` scripts:
+      ```
+      "scripts": {
+          "build": "make build",
+          "test": "make test",
+          "preversion": "make qa",
+          "lint": "make lint",
+          "lint:fix": "make lint-fix",
+          "qa": "make qa"
+        }
+      ```
+6. Do some work and save it: `sdlc work save -- summary="initial implementation"`
+7. Create PR: `sdlc work submit`
 
 Refer to the [user documentation](./docs/index.md)
