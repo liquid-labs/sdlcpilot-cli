@@ -2,7 +2,10 @@
 
 Command line interface for SDLCPilot, a Software Development Life Cycle management tool. Currently support GitHub node projects.
 
-## Installation
+- [Install](#install)
+- [Usage](#usage)
+
+## Install
 
 1. Ensure node and npm are installed (see ['node not found'](#node-not-found))
 2. Install 'sdlcpilot-cli'.
@@ -48,4 +51,21 @@ Where `/path/to/bin/dir` is replaced with the path of the bin directory in quest
 
 ## Usage
 
-Refer to the [user documentation](./docs/index.md).
+1. Create a project:
+   ```
+   sdlc projects create -- newProjectName=liquid-labs/indepndent-context
+   ```
+   This will both create a (initially private) repo and check it out in your playground base. (<- TODO: explain this, link)
+2. Change dir to the new project: `cd independent-context`
+3. Open an "Initial implementation" issue and start the work. After this, you should be on the workbranch.
+   1. Create the issue in GitHub if you want to be verbose. Then start the work:
+      ```
+      sdlc work start -- issues=1
+      ```
+   2. Directly from the command line:
+      ```
+      sdlc work start -- issueTitle='Initial implementation' issueOverview='Implement basic functions' issueDeliverables="do X;;do Y"
+      ```
+4. Do some work. TODO: submit work and publish release.
+
+Refer to the [user documentation](./docs/index.md)
