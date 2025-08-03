@@ -8,9 +8,9 @@ Command line interface for SDLCPilot, a Software Development Life Cycle manageme
 ## Install
 
 1. Ensure node and npm are installed (see ['node not found'](#node-not-found))
-2. Install 'sdlcpilot-cli'.
+2. Install 'sdlcpilot-cli' and 'comply-server'.
    ```bash
-   npm i -g sdlcpilot-cli
+   npm i -g sdlcpilot-cli comply-server
    ```
 3. Run:
    ```bash
