@@ -35,7 +35,7 @@ The first line should tell you where the NPM `lib` direcotry is located. Verify 
 
 #### node not found
 
-If node is not installed, refer to the [node package install page](https://nodejs.org/en/download/package-manager/) ([MacOS](https://nodejs.org/en/download/package-manager/#macos) and [Windows](https://nodejs.org/en/download/package-manager/#windows-1)) for installation instructions for your particular platform / distribution.
+If node is not installed, refer to the [node package install page](https://nodejs.org/en/download/package-manager/) ([MacOS](https://nodejs.org/en/download/package-manager/#macos) and [Windows](https://nodejs.org/en/download/package-manager/#windows-1)) for installation instructions for your particular platform / distribution. You can also [install `nvm`](https://github.com/nvm-sh/nvm), which provides support for installing user-global `npm` packages without root priveleges.
 
 If/once node is installed, [add the installation directory to your `PATH`](#update-your-path) (if not already done). For instance, if installing on MacOS with Homebrew, you would add `/opt/homebrew/bin` to the `PATH` var.
 
@@ -55,9 +55,11 @@ Where `/path/to/bin/dir` is replaced with the path of the bin directory in quest
    ```
    sdlc projects create -- newProjectName=liquid-labs/indepndent-context
    ```
-   This will both create a (initially private) repo and check it out in your playground base. (<- TODO: explain this, link)
-2. Change dir to the new project: `cd independent-context`
-3. Open an "Initial implementation" issue and start the work. After this, you should be on the workbranch.
+   This will both create a (initially private) repo and check it out in your playground base, which is `${HOME}/playground`. (This is not currently configurable.)
+   -- or --
+   You can `git clone` a project under `~/playground`. The standard expected layout is `~/playground/<git org>/<repo name>`. (In future, `sdlc` will support importing projects directly.)
+3. Change dir to the new project: `cd independent-context`
+4. Open an "Initial implementation" issue and start the work. After this, you should be on the workbranch.
    1. Create the issue in GitHub if you want to be verbose. Then start the work:
       ```
       sdlc work start -- issues=1
@@ -66,12 +68,12 @@ Where `/path/to/bin/dir` is replaced with the path of the bin directory in quest
       ```
       sdlc work start -- issueTitle='Initial implementation' issueOverview='Implement basic functions' issueDeliverables="do X;;do Y"
       ```
-4. Create a minimal project (TODO: I think this may be automated somewhere...):
+5. Create a minimal project (TODO: I think this may be automated somewhere...):
    ```
    mkdkir src
    echo -e "console.log('Hello world!')\n" > src/index.mjs
    ```
-5. Setup development cycle stuff (if creating a Javascript based project):
+6. Setup development cycle stuff (if creating a Javascript based project):
    1. `sdlc projects workflows local node-build add`
    2. Update the `package.json` scripts:
       ```
@@ -84,9 +86,9 @@ Where `/path/to/bin/dir` is replaced with the path of the bin directory in quest
           "qa": "make qa"
         }
       ```
-6. Do some work and save it: `sdlc work save -- summary="initial implementation"`
-7. Create PR: `sdlc work submit`
-8. Review and merge PR on GitHub.
-9. Close the work and return to main: `sdlc work close`
+7. Do some work and save it: `sdlc work save -- summary="initial implementation"`
+8. Create PR: `sdlc work submit`
+9. Review and merge PR on GitHub.
+10. Close the work and return to main: `sdlc work close`
 
 Refer to the [user documentation](./docs/index.md)
