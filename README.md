@@ -7,7 +7,7 @@ Command line interface for SDLCPilot, a Software Development Life Cycle manageme
 
 ## Install
 
-1. Ensure node and npm are installed (see ['node not found'](#node-not-found))
+1. If either `npm -v` or `node -v` are not found, see ['Install `node` and `npm`'](#install-node-and-npm).
 2. Install 'sdlcpilot-cli' and 'comply-server'.
    ```bash
    npm i -g sdlcpilot-cli comply-server
@@ -33,11 +33,21 @@ npm ls -g
 
 The first line should tell you where the NPM `lib` direcotry is located. Verify that if you swap that out `lib` for `bin`, you can `ls` the `sdlc` executable. It might be something like: `/opt/homebrew/bin` or `/Users/foo/.npm-global/bin`. Now [update your `PATH`](#update-your-path) to include the global NPM bin directory.
 
-#### node not found
+#### Install `node` and `npm`
 
-If node is not installed, refer to the [node package install page](https://nodejs.org/en/download/package-manager/) ([MacOS](https://nodejs.org/en/download/package-manager/#macos) and [Windows](https://nodejs.org/en/download/package-manager/#windows-1)) for installation instructions for your particular platform / distribution. You can also [install `nvm`](https://github.com/nvm-sh/nvm), which provides support for installing user-global `npm` packages without root priveleges.
+We recommend using Node Version Manager (`nvm`) to install `node` and `npm`; [`nvm` installation instructions can be found here](https://github.com/nvm-sh/nvm). `nvm` provides support for installing 'global' packages on a per-user account basis without the need for root priveleges. It also provides a convenient tool for using and testing different versions of node.
 
-If/once node is installed, [add the installation directory to your `PATH`](#update-your-path) (if not already done). For instance, if installing on MacOS with Homebrew, you would add `/opt/homebrew/bin` to the `PATH` var.
+To use the latest "long term support" version (LTS), use:
+```bash
+nvm install --lts
+nvm use --lts
+```
+
+Or to use the latest stable version, use:
+```bash
+nvm install node
+nvm use node
+```
 
 #### Update your PATH
 
