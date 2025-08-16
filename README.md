@@ -49,16 +49,6 @@ nvm install node
 nvm use node
 ```
 
-#### Update your PATH
-
-For bash or zsh, add the following lines to `.bashrc` or `.zshrc` respectively:
-```bash
-PATH=/path/to/bin/dir:$PATH
-export PATH
-```
-
-Where `/path/to/bin/dir` is replaced with the path of the bin directory in question.
-
 ## Usage
 
 1. Create a project:
