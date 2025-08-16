@@ -1,4 +1,4 @@
-# sdlcpilot-cli
+# sdlcforge cli
 
 Command line interface for SDLCPilot, a Software Development Life Cycle management tool. Currently support GitHub node projects.
 
